@@ -1,21 +1,43 @@
-public class HR extends Employee { private int experience;
+class HR {
+    private String name;
+    private int age;
+    private double salary;
 
-    public HR(String name, int age, double salary, int experience) {
-        super(name, age, salary);
-        this.experience = experience;
+    public HR() {}
+
+    public HR(String name, int age, double salary) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
     }
 
-    public int getExperience() {
-        return experience;
+    public String getName() {
+        return name;
     }
 
-    public void setExperience(int experience) {
-        this.experience = experience;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    @Override
-    public void Show() {
-        super.Show();
-        System.out.println("Experience: " + experience);
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public void show() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Salary: " + salary);
     }
 }

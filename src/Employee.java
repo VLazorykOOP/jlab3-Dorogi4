@@ -1,55 +1,35 @@
-public class Employee {
-    private String Name;
-    private int age;
-    private double salary;
+class Employee extends HR {
+    private String jobTitle;
+    private String department;
 
-    {
-        Name = "Noname N.";
-        age = 45;
-        salary = 1005.01;
+    public Employee() {}
 
-
-    }
-    public Employee (String n, int a , double s) {
-        Name = n;
-        age = a;
-        salary = s;
-
-    }
-    public Employee(String in_name){
-        Name=in_name;
-        age= 30;
-        salary=1000;
-
+    public Employee(String name, int age, double salary, String jobTitle, String department) {
+        super(name, age, salary);
+        this.jobTitle = jobTitle;
+        this.department = department;
     }
 
-    public String getName() {
-        return Name;
+    public String getJobTitle() {
+        return jobTitle;
     }
 
-    public void setName(String name) {
-        this.Name = Name;
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
     }
 
-    public int getAge() {
-        return age;
+    public String getDepartment() {
+        return department;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setDepartment(String department) {
+        this.department = department;
     }
 
-    public double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
-    public void Show() {
-        System.out.println("Name: " + Name);
-        System.out.println("Age: " + age);
-        System.out.println("Salary: " + salary);
+    @Override
+    public void show() {
+        super.show();
+        System.out.println("Job Title: " + jobTitle);
+        System.out.println("Department: " + department);
     }
 }

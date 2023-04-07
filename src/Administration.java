@@ -1,21 +1,24 @@
-public class Administration extends Employee { private String position;
+class Administration extends HR {
+    private String task;
 
-    public Administration(String name, int age, double salary, String position) {
+    public Administration() {}
+
+    public Administration(String name, int age, double salary, String task) {
         super(name, age, salary);
-        this.position = position;
+        this.task = task;
     }
 
-    public String getPosition() {
-        return position;
+    public String getTask() {
+        return task;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public void setTask(String task) {
+        this.task = task;
     }
 
     @Override
-    public void Show() {
-        super.Show();
-        System.out.println("Position: " + position);
+    public void show() {
+        super.show();
+        System.out.println("Task: " + task);
     }
 }
